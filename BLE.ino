@@ -59,7 +59,7 @@ void waitDoingServices(unsigned long wait_time, unsigned char bProtocolServices)
 	while ((mymillis() - start_wait) < wait_time)
 	{
 		if (bProtocolServices) controlProtocolService();
-		delay(20);
+		delay(2);
 	}
 }
 
@@ -431,10 +431,11 @@ void send_data(unsigned char *msg, unsigned char len)
 	}
 #else /* RFD */
 	void SimbleeBLE_onReceive(char *data, int len)
-	{
+	{    
 		int i;
 		check_stack("#orc#");
 		for (i = 0; i < len; i++) bleBufWrite(data[i]);
+    waitDoingServicesInterruptible(200, &got_ack, 1);
 	}
 
 	void SimbleeBLE_onDisconnect()

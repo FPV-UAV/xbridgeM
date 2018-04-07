@@ -81,7 +81,7 @@
 #define PIN_SPI_SS    6
 #define PIN_IRQ       2
 const int SS_PIN = SS;				// Slave Select pin, uses standard wiring from variant.h
-									// const int IRQ_PIN = 2;  // IRQ/DIN pin used for wake-up pulse
+// const int IRQ_PIN = 2;     // IRQ/DIN pin used for wake-up pulse
 
 /* *** NFC section seetings *** */
 #define ALL_BYTES 0x1007

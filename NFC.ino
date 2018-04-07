@@ -212,7 +212,6 @@ void readAllData()
 	runSystemInformationCommandUntilNoError(10);
 	systemInformationDataFromGetSystemInformationResponse();
 	printSystemInformationData();
-	
 	memcpy(sensor.uid, systemInformationData.uid, sizeof(sensor.uid));		// get current sensor SN
 	
 	bool identical = 1;
@@ -232,6 +231,7 @@ void readAllData()
 	}
 	
 	memcpy(sensor.oldUid, systemInformationData.uid, sizeof(sensor.uid)); // after reinitialization store the current UID for the next loop 
+	
 
 	sensorData.sensorDataOK = readSensorData();
 
@@ -265,9 +265,7 @@ void runSystemInformationCommandUntilNoError(int maxTrials)
 
 void systemInformationDataFromGetSystemInformationResponse()
 {
-	check_stack("#sysInfDta#");
-
-	SystemInformationDataType systemInformationData;
+	check_stack("#sysInfDta#");	
 	systemInformationData.resultCode = resultBuffer[0];
 	systemInformationData.responseFlags = resultBuffer[2];
 	if (systemInformationData.resultCode == 0x80)
@@ -300,14 +298,9 @@ void systemInformationDataFromGetSystemInformationResponse()
 
 void printSystemInformationData()
 {
-	check_stack("#psid#");
-
-	print_state("");
-	String ss = "1Sensor SN: ";
-	ss += sensorData.sSN;
-	Serial.printf("Sensor SN: %s \r\n", systemInformationData.sensorSN);
-
-	Serial.print(ss);
+	check_stack("#psid#");  
+	print_state("Sensor SN: ");
+	Serial.print(systemInformationData.sensorSN);
 }
 
 bool readSensorData()

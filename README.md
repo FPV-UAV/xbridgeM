@@ -63,7 +63,7 @@ typedef struct __attribute__((__packed__))
 } _StatusPacket;
 ```
 Sensor status codes:
-- 01 - not yest started
+- 01 - not yet started
 - 02 - starting (first 60 minutes after activation)
 - 03 - ready (normal 14-days work)
 - 04 - expired (just after end of 14-days period, still working for approx next 12h)

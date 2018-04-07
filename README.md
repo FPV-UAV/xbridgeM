@@ -36,9 +36,10 @@ typedef struct __attribute__((__packed__))
   uint8_t   size;                 // size of the packet (12)
   uint8_t   cmd_code;             // Always 0x02 for a xbridgeEXT protocol packet.
   uint8_t   sub_code;             // Subtype code. 0x00 for a request packet.
-  uint8_t   requested_sub_code;   // 0x00 xbridge Data Packet, 0x01 status packet, 0x02  last 15 minutes readings part1, 
-                                  // 0x03 last 15 minutes readings part2, 0x04 last 8 hours readings part1, 0x05 last 8 hours readings
-                                  // part2, 0x06 last 8 hours readings part3, 0x07 last 8 hours readings part4
+  uint8_t   requested_sub_code;   // 0x00 xbridge Data Packet, 0x01 status packet, 0x02 last 15 minutes readings part1, 
+                                  // 0x03 last 15 minutes readings part2, 0x04 last 8 hours readings part1, 
+                                  // 0x05 last 8 hours readings part2, 0x06 last 8 hours readings part3, 
+                                  // 0x07 last 8 hours readings part4
   uint32_t  dex_src_id;           // raw TXID of the requested Dexcom Transmitter
   uint32_t  timestamp;            // current timestamp
 } _DataRequestPacket;

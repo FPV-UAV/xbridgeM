@@ -28,7 +28,7 @@ typedef struct 	 __attribute__((packed))
   unsigned char function;       // Byte representing the xBridge code funcitonality.  01 = this level.
 } nRawRecord;
 ```
-__dex_tx_id = 0xA5B1AE;     // TXID for xbridge2 protocol packets = "ABCDE"__
+__dex_tx_id = dex_src_id = 0xA5B1AE;     // TXID for xbridge2 protocol packets = "ABCDE"__
 
 
 #### B. __Request data packet - App to Device. Request for various data from sensor.

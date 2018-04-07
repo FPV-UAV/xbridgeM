@@ -4,9 +4,10 @@ xbridgeM - Read the Freestyle Libre sensor and send the BG readings to phone app
 
 This project is is a modification/extension of the Lbridge project from Keencave (https://github.com/keencave/LBridge). 
 The code is running on the Simblee/RFDuino hardware platform - T-mini(Simblee) and T-I/T-II(RFduino).
-Hardware details - in /Hardware folder.
+Hardware details - in /Hardware folder. More about Devices - https://mtransmiter.pl and FB group T-Mini Users: https://www.facebook.com/groups/188288191764699
 
-__Please note, that xbridgeM code is NOT maintained by Abbott. It is an experimental DIY project. You will built your own individual hardware device. So you are responsible yourself for what you have built. This is not a medical device. Dont make any medical decisions based on the results as they can be wrong!__
+
+__Please note, that xbridgeM code is NOT maintained by Abbott. It is an experimental DIY project. You will built/buy your own individual hardware device. So you are responsible yourself for what you have. This is not a medical device. Dont make any medical decisions based on the results as they can be wrong!__
 
 ## xBridge2 protocol implementation:
 

@@ -147,6 +147,17 @@ typedef struct __attribute__((__packed__))
 } _txid_packet;
 ```
 
+#### K. __Beacon packet to negotiate and send TXID - Device to App. 
+```
+typedef struct __attribute__((__packed__)) _beacon_packet
+{
+  uint8_t size;             // size of the packet (0x7)
+  uint8_t cmd_code;         // code for this data packet.  0xF1
+  uint32_t  dex_src_id;     // raw TXID of the Dexcom Transmitter
+  uint8_t function;         // Byte representing the xBridge code funcitonality.  01 = this level.
+};
+```
+
 ### 2. Communication flow.
 
 #### A. Normal (automatic, non-interactive) work: 
